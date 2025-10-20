@@ -66,7 +66,21 @@ endif()
 # 5) Export and chain-load
 set(ENV{VCPKG_ROOT} "${_vcpkg_dir}")
 set(VCPKG_ROOT "${_vcpkg_dir}" CACHE PATH "" FORCE)
+
 set(_vcpkg_toolchain "${_vcpkg_dir}/scripts/buildsystems/vcpkg.cmake")
+
+
+
+# Pick a location relative to the detected VCPKG_ROOT
+set(_cache_hint "${_vcpkg_dir}/../.vcpkg-cache")
+get_filename_component(_cache_abs "${_cache_hint}" REALPATH)
+file(MAKE_DIRECTORY "${_cache_abs}")
+message(STATUS "_cache_abs: ${_cache_abs}")
+
+set(ENV{VCPKG_DEFAULT_BINARY_CACHE} "${_cache_abs}")
+set(ENV{VCPKG_BINARY_SOURCES} "clear;files,${_cache_abs},readwrite")
+
+set(ENV{VCPKG_DEFAULT_BINARY_CACHE} "${_vcpkg_dir}/../.vcpkg-cache")
 
 #if (DEFINED ENV{BITLOOP_ROOT})
 #  set(OVERLAY_PORTS_PATH "$ENV{BITLOOP_ROOT}/vcpkg-ports/ports")
