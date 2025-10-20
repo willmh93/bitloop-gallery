@@ -1,3 +1,6 @@
 [submodule "bitloop"]
 	path = bitloop
 	url = https://github.com/willmh93/bitloop.git
+[submodule "projects/Mandelbrot"]
+	path = projects/Mandelbrot
+	url = https://github.com/willmh93/bitloop-mandelbrot.git
