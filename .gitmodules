@@ -1,7 +1,7 @@
 [submodule "bitloop"]
 	path = bitloop
 	url = https://github.com/willmh93/bitloop.git
-	branch = dev
+	branch = main
 [submodule "projects/Mandelbrot"]
 	path = projects/Mandelbrot
 	url = https://github.com/willmh93/bitloop-mandelbrot.git
