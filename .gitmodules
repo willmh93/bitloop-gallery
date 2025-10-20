@@ -1,0 +1,3 @@
+[submodule "bitloop"]
+	path = bitloop
+	url = https://github.com/willmh93/bitloop.git
