@@ -44,5 +44,6 @@
 **/build/
 out
 /captures
-**/vcpkg/
+**/.vcpkg/
+**/.vcpkg-installed/
 **/.vcpkg-cache

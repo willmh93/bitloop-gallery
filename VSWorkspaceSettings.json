@@ -1,0 +1,14 @@
+{
+  "ExcludedItems": [
+    ".vcpkg/",
+    ".vcpkg-installed/",
+    ".bitloop-workspace",
+    "bitloop.bat",
+    "bitloop.sh",
+    "LICENSE",
+    "README.md",
+    ".unversioned",
+    ".gitattributes",
+    ".editorconfig"
+  ]
+}
