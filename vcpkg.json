@@ -5,7 +5,7 @@
   "dependencies": [
     {
       "name": "bitloop",
-      "features": []
+      "features": ["ffmpeg", "ffmpeg-x265"]
     }
   ]
 }
