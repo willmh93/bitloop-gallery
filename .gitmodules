@@ -5,3 +5,7 @@
 [submodule "projects/Mandelbrot"]
 	path = projects/Mandelbrot
 	url = https://github.com/willmh93/bitloop-mandelbrot.git
+[submodule "projects/ThreeBodyProblem"]
+	path = projects/ThreeBodyProblem
+	url = https://github.com/willmh93/bitloop-three-body-problem.git
+	branch = main

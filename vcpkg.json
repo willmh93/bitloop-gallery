@@ -4,8 +4,36 @@
   "version-string": "0.1.0",
   "dependencies": [
     {
-      "name": "bitloop",
-      "features": ["ffmpeg", "ffmpeg-x265"]
-    }
+      "host": true,
+      "name": "vcpkg-tool-ninja",
+      "platform": "windows"
+    },
+    {
+      "host": true,
+      "name": "brotli-tool"
+    },
+
+    {
+      "name": "imgui",
+      "features": [ "docking-experimental", "freetype", "sdl3-binding", "opengl3-binding" ]
+    },
+    {
+      "name": "ffmpeg",
+      "platform": "!wasm32",
+      "default-features": false,
+      "features": [ "avcodec", "avdevice", "avfilter", "avformat", "swresample", "swscale", "x265" ]
+    },
+    "freetype",
+    "sdl3",
+    "glad",
+    "glm",
+    "concurrentqueue",
+    "nanovg",
+    "nanosvg",
+    "libwebp",
+    "nlohmann-json",
+    "brotli",
+    "bshoshany-thread-pool",
+    "implot"
   ]
 }

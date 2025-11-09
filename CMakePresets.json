@@ -1,6 +1,10 @@
 {
   "version": 3,
-  "cmakeMinimumRequired": {"major": 3, "minor": 21, "patch": 0},
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 21,
+    "patch": 0
+  },
 
   "configurePresets": [
     {
@@ -24,6 +28,38 @@
         "CMAKE_BUILD_TYPE": "Release",
         "CMAKE_EXPORT_COMPILE_COMMANDS": "YES",
         "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/cmake/toolchain/vcpkg_autodetect.cmake",
+        "VCPKG_INSTALL_OPTIONS": "--x-abi-tools-use-exact-versions"
+      }
+    },
+    {
+      "name": "ninja-release-dbg",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/ninja-release-dbg",
+      "toolchainFile": "${sourceDir}/cmake/toolchain/vcpkg_autodetect.cmake",
+      "cacheVariables": {
+        "BUILD_FLAVOR": "ninja-release-dbg",
+        "CMAKE_BUILD_TYPE": "RelWithDebInfo",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "YES",
+        "VCPKG_BUILD_STATIC": "ON",
+        "VCPKG_INSTALL_OPTIONS": "--x-abi-tools-use-exact-versions"
+      }
+    },
+    {
+      "name": "ninja-release-win-static",
+      "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Windows"
+      },
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/ninja-release-win-static",
+      "toolchainFile": "${sourceDir}/cmake/toolchain/vcpkg_autodetect.cmake",
+      "cacheVariables": {
+        "BUILD_FLAVOR": "ninja-release-win-static",
+        "CMAKE_BUILD_TYPE": "Release",
+        "VCPKG_TARGET_TRIPLET": "x64-windows-static",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "YES",
+        "VCPKG_BUILD_STATIC": "ON",
         "VCPKG_INSTALL_OPTIONS": "--x-abi-tools-use-exact-versions"
       }
     },
@@ -86,10 +122,12 @@
     }
   ],
   "buildPresets": [
-    { "name": "ninja-debug",               "configurePreset": "ninja-debug" },
-    { "name": "ninja-release",             "configurePreset": "ninja-release" },
-    { "name": "wasm32-debug",              "configurePreset": "wasm32-debug" },
-    { "name": "wasm32-release",            "configurePreset": "wasm32-release" },
-    { "name": "wasm32-release-debug-info", "configurePreset": "wasm32-release-debug-info" }
+    { "name": "ninja-debug",                "configurePreset": "ninja-debug" },
+    { "name": "ninja-release",              "configurePreset": "ninja-release" },
+    { "name": "ninja-release-dbg",          "configurePreset": "ninja-release-dbg" },
+    { "name": "ninja-release-win-static",   "configurePreset": "ninja-release-win-static" },
+    { "name": "wasm32-debug",               "configurePreset": "wasm32-debug" },
+    { "name": "wasm32-release",             "configurePreset": "wasm32-release" },
+    { "name": "wasm32-release-debug-info",  "configurePreset": "wasm32-release-debug-info" }
   ]
 }
