@@ -1,9 +1,12 @@
 {
-  "default-registry": { "kind": "builtin", "baseline": "74e6536215718009aae747d86d84b78376bf9e09" },
+  "default-registry": {
+    "kind": "builtin",
+    "baseline": "74e6536215718009aae747d86d84b78376bf9e09"
+  },
   "registries": [
     {
       "kind": "git",
-      "baseline": "97aacec7b1597bb34be7ab4c57e9b7b40a823fe3",
+      "baseline": "77a7a28f051ecd36c3a995bd3cb1f964b3114f10",
       "repository": "https://github.com/willmh93/bitloop-registry.git",
       "packages": [
         "brotli-tool",
