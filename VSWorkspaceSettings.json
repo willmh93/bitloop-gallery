@@ -9,6 +9,7 @@
     "README.md",
     ".unversioned",
     ".gitattributes",
-    ".editorconfig"
+    ".editorconfig",
+    "captures"
   ]
 }
