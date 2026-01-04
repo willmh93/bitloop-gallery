@@ -29,6 +29,7 @@
     "glm",
     "gcem",
     "concurrentqueue",
+    "tsl-ordered-map",
     "nanovg",
     "nanosvg",
     "libwebp",
