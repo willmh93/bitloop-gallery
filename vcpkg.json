@@ -12,16 +12,28 @@
       "host": true,
       "name": "brotli-tool"
     },
-
     {
       "name": "imgui",
-      "features": [ "docking-experimental", "freetype", "sdl3-binding", "opengl3-binding" ]
+      "features": [
+        "docking-experimental",
+        "freetype",
+        "sdl3-binding",
+        "opengl3-binding"
+      ]
     },
     {
       "name": "ffmpeg",
       "platform": "!wasm32",
       "default-features": false,
-      "features": [ "avcodec", "avdevice", "avfilter", "avformat", "swresample", "swscale", "x265" ]
+      "features": [
+        "avcodec",
+        "avdevice",
+        "avfilter",
+        "avformat",
+        "swresample",
+        "swscale",
+        "x265"
+      ]
     },
     "freetype",
     "sdl3",
