@@ -2,52 +2,5 @@
   "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg-configuration.schema.json",
   "name": "sim",
   "version-string": "0.1.0",
-  "dependencies": [
-    {
-      "host": true,
-      "name": "vcpkg-tool-ninja",
-      "platform": "windows"
-    },
-    {
-      "host": true,
-      "name": "brotli-tool"
-    },
-    {
-      "name": "imgui",
-      "features": [
-        "docking-experimental",
-        "freetype",
-        "sdl3-binding",
-        "opengl3-binding"
-      ]
-    },
-    {
-      "name": "ffmpeg",
-      "platform": "!wasm32",
-      "default-features": false,
-      "features": [
-        "avcodec",
-        "avdevice",
-        "avfilter",
-        "avformat",
-        "swresample",
-        "swscale",
-        "x265"
-      ]
-    },
-    "freetype",
-    "sdl3",
-    "glad",
-    "glm",
-    "gcem",
-    "concurrentqueue",
-    "tsl-ordered-map",
-    "nanovg",
-    "nanosvg",
-    "libwebp",
-    "nlohmann-json",
-    "brotli",
-    "bshoshany-thread-pool",
-    "implot"
-  ]
+  "dependencies": []
 }

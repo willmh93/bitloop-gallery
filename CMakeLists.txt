@@ -13,6 +13,7 @@ bitloop_new_project(Gallery)
 bitloop_add_dependency(Gallery  projects/Mandelbrot)
 bitloop_add_dependency(Gallery  projects/ThreeBodyProblem)
 #bitloop_add_dependency(Gallery  projects/ChatGPT_Test)
+#bitloop_add_dependency(Gallery  bitloop/examples)
 
 #bitloop_show(Cardioid)
 
